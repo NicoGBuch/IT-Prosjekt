@@ -1,4 +1,2 @@
 # IT-Prosjekt
- 
- Skibidi rizzler
- sigma
+hei
