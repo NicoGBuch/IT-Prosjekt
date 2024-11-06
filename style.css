@@ -10,7 +10,7 @@
     font-family: "Poppins", serif;
 }
 
-body{
+body {
     background-color: #0F121A;
     color: #DDE2C6;
 }
@@ -19,7 +19,7 @@ img {
     width: 100%;
 }
 
-#title{
+#title {
     font-family: Audiowide;
     font-weight: 100;
     font-size: 40px;
@@ -28,7 +28,12 @@ img {
 
 .navbar {
     display: flex;
-    padding: 10px 0;
+    padding: 12px 0;
+    margin-bottom: 14px;
+
+    border-bottom: 0.5px solid white;
+    /* background-image: url("bilder/navbarBanner.jpg");
+    background-size: cover; */
 }
 
 .navbar a {
