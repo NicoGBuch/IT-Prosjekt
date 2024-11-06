@@ -32,9 +32,16 @@ img {
 }
 
 .navbar a {
+    display: flex;
+    justify-content: space-around;
     font-size: 24px;
     text-decoration-line: none;
-    margin: auto;
     color: inherit;
+    padding: 20px;
+}
+
+.navbar a:hover{
+    color: #0F121A;
+    background-color: #DDE2C6;
 }
 
