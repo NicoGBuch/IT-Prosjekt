@@ -18,11 +18,25 @@ img {
     width: 100%;
 }
 
+<<<<<<< Updated upstream
 #title{
     font-family: Audiowide;
     font-weight: 100;
     font-size: 40px;
     text-align: center;
     color: #DDE2C6;
+=======
+
+.navbar {
+    display: flex;
+    padding: 10px 0;
+}
+
+.navbar a {
+    font-size: 24px;
+    color: black;
+    text-decoration-line: none;
+    margin: auto;
+>>>>>>> Stashed changes
 }
 
