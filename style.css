@@ -10,6 +10,10 @@
     font-family: "Poppins", serif;
 }
 
+body{
+    background-color: #0F121A;
+}
+
 img {
     width: 100%;
 }
@@ -19,5 +23,6 @@ img {
     font-weight: 100;
     font-size: 40px;
     text-align: center;
+    color: #DDE2C6;
 }
 
