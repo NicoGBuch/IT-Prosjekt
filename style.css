@@ -41,10 +41,12 @@ img {
     text-decoration-line: none;
     color: inherit;
     padding: 20px;
+
+    transition: color 0.1s ease-in-out;
 }
 
 .navbar a:hover{
     color: #0F121A;
-    background-color: linear-gradient(to right, #DDE2C6, rgba(0,0,0,0));;
+    background: linear-gradient(to top, #DDE2C6, rgba(0,0,0,0));
 }
 
