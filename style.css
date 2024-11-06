@@ -12,6 +12,7 @@
 
 body{
     background-color: #0F121A;
+    color: #DDE2C6;
 }
 
 img {
@@ -23,7 +24,6 @@ img {
     font-weight: 100;
     font-size: 40px;
     text-align: center;
-    color: #DDE2C6;
 }
 
 .navbar {
@@ -33,8 +33,8 @@ img {
 
 .navbar a {
     font-size: 24px;
-    color: black;
     text-decoration-line: none;
     margin: auto;
+    color: inherit;
 }
 
