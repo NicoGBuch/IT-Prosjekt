@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binær til Tall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html">Hjem</a>
+        <a href="oversetter.html">Binære</a>
+        <a href="/tegnsett">Tegnsett</a>
+    </div>
+
+    <div id="kalkulator">
+        skriv inn vanlig tall
+        <br>
+        <input type="number" id="input">
+        <br>
+        <p id="resultat"><br></p>
+        <input type="button" onclick="konverter()"></input>
+    </div>
+
+    <script>
+
+        function konverter() {
+            const svar = document.getElementById("input").value;
+            const nummer = parseInt(svar);
+
+            if (isNaN(nummer)) {
+                alert("Venligst skriv inn et tall")
+            } else {
+                const binartall = nummer.toString(2);
+                document.getElementById("resultat").innerHTML = binartall;
+            }
+        }
+    </script>
+
+</html>
