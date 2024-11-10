@@ -83,24 +83,54 @@ input{
 
 .gridbox{
     display: grid;
-    grid-template-columns: 200px auto;
-    grid-template-rows: 150px auto 150px;
-    height: 100vh;
-    gap: 5px;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 200px 200px 100px ;
+    gap: 20px;
+    padding-top: 50px;
+    justify-content: center;
+
 }
 
-header,footer,main,aside{
+.gridbox div{
     border: 2px solid black;
-    background-color: #b5ceb4;
+    background-color: lightgreen;
     font-size: 30px;
     padding: 20px;
     color: green;
+    border-radius: 10px;
+
 }
 
-header{
-    grid-column: 1/3;
+
+#boks1{
+    grid-row: 1/3;
+    background-image:url("https://cdn.pixabay.com/photo/2014/10/05/19/02/binary-code-475664_1280.jpg") ;
+    background-size: cover;
 }
 
-footer{
-    grid-column: 1/3;
+#boks3{
+    grid-row: 1/3;
+    grid-column: 3;
+    background-image: url("https://cdn.pixabay.com/photo/2022/05/24/14/15/binary-code-7218631_1280.jpg");
+    background-size: cover;
+}
+
+#boks2{
+    background-image: url("https://cdn.pixabay.com/photo/2020/05/20/05/44/digitization-5194814_1280.jpg");
+    background-size: cover;
+}
+
+
+#boks4{
+    grid-row: 2/4;
+    background-image:url("https://cdn.pixabay.com/photo/2021/09/09/04/38/binary-6609473_1280.jpg");
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    height: 1000px;
+    margin-top: 100px;
+    background-color: #001e00;
+
 }
