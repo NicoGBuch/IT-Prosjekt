@@ -104,3 +104,26 @@ input{
     font-size: 40px;
 }
 
+.gridbox{
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 150px auto 150px;
+    height: 100vh;
+    gap: 5px;
+}
+
+header,footer,main,aside{
+    border: 2px solid black;
+    background-color: #b5ceb4;
+    font-size: 30px;
+    padding: 20px;
+    color: green;
+}
+
+header{
+    grid-column: 1/3;
+}
+
+footer{
+    grid-column: 1/3;
+}
