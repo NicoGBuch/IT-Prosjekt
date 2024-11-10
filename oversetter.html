@@ -6,28 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binær til Tall</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
-<body>
+<body class="oversetter">
     <div class="navbar">
         <a href="index.html">Hjem</a>
         <a href="oversetter.html">Binære</a>
         <a href="/tegnsett">Tegnsett</a>
     </div>
+    <div class="hovedoversetter">
+        <div id="kalkulator">
+            <p>Vanlig tall <i class="fa-solid fa-arrow-right-long"></i> Binært Tall</p>
+            <br>
+            <input type="number" id="inputvanlig" placeholder="Vanlig Tall">
+            <br>
+            <p id="resultat"><br></p>
+            <input type="button" onclick="konverter()" placeholder="Kalkuler"></input>
 
-    <div id="kalkulator">
-        skriv inn vanlig tall
-        <br>
-        <input type="number" id="input">
-        <br>
-        <p id="resultat"><br></p>
-        <input type="button" onclick="konverter()"></input>
+        </div>
+        <div id="kalkulator">
+            <p>Vanlig tall <i class="fa-solid fa-arrow-left-long"></i> Binært Tall</p>
+            <br>
+            <input type="number" id="inputbinar" placeholder="Binært Tall">
+            <br>
+            <p id="resultat"><br></p>
+            <input type="button" onclick="konverter()" placeholder="Kalkuler"></input>
+
+        </div>
     </div>
 
     <script>
 
         function konverter() {
-            const svar = document.getElementById("input").value;
+            const svar = document.getElementById("inputvanlig").value;
             const nummer = parseInt(svar);
 
             if (isNaN(nummer)) {
