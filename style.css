@@ -187,3 +187,18 @@ input{
     background-color: #001b1b;
 
 }
+
+.container h1{
+padding-top: 100px;
+text-align: center;
+}
+
+.container p{
+    text-align: center;
+    margin: 150px;
+    margin-top: 30px;
+    line-height: 2;
+}
+
+
+
