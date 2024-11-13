@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tegnsett</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="oversetter">
+    <div class="navbar">
+        <a href="/">Hjem</a>
+        <a href="oversetter.html">Binære</a>
+        <a href="/tegnsett">Tegnsett</a>
+    </div>
+
+    <div class="hovedoversetter">
+        <h2>ASCII</h2>
+        <p>
+            Et tegnsett er en standard som definerer hvordan ulike tegn som bokstaver, tall og symboler skal representeres binært.
+            ASCII er et grunnleggende tegnsett som tildeler hvert tegn en binær verdi fra 0 til 127, slik at bokstaven "A" for eksempel representeres som 01000001.
+        </p>
+
+        <h2>Unicode</h2>
+        <p>
+            For å håndtere tegn fra ulike språk og spesialtegn som ikke dekkes av ASCII, brukes ofte Unicode.
+            Unicode har en mer omfattende koding, med formater som UTF-8, som kan bruke 1 til 4 bytes per tegn.
+            Dette gjør det mulig for ulike systemer å tolke og vise tekst korrekt uavhengig av språk eller spesialtegn.
+        </p>
+
+        <div id="kalkulator">
+            <p id="kalktop">Vanlig tall <i class="fa-solid fa-arrow-right-long"></i> Bokstaver</p>
+            <div id="kalkinput">
+                <form onsubmit="konvertervanlig()">
+                    <input type="number" id="inputvanlig" placeholder="Vanlig Tall">
+                </form>
+            </div>
+            <div id="resultat">
+                <p id="resultatvanlig"><br></p>
+            </div>
+        </div>
+        <div id="kalkulator">
+            <p id="kalktop">Bokstaver <i class="fa-solid fa-arrow-right-long"></i> Vanlig tall</p>
+            <div id="kalkinput">
+                <form onsubmit="konverterbinare()">
+                    <input type="text" id="inputbinare" placeholder="Tekst">
+                </form>
+            </div>
+            <div id="resultat">
+                <p id="resultatbinare"><br></p>
+            </div>
+        </div>
+
+        <script>
+
+            function konvertervanlig() {
+                event.preventDefault();
+                const tall = parseInt(document.getElementById("inputvanlig").value);
+                const tekst = String.fromCharCode(tall);
+                console.log(tekst);
+                if (tekst == undefined) {
+                    alert("Venligst skriv inn et gyldig tall")
+                } else {
+                    document.getElementById("resultatvanlig").innerHTML = tekst;
+                }
+            }
+
+            function konverterbinare() {
+                event.preventDefault();
+                const tekst = document.getElementById("inputbinare").value;
+
+                let tall = "";
+                for (let i = 0; i < tekst.length; i++) {
+                    tall += tekst.charAt(i).charCodeAt(0) + " ";
+                }
+
+                document.getElementById("resultatbinare").innerHTML = tall;
+            }
+        </script>
+
+</html>

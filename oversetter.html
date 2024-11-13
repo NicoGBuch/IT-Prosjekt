@@ -16,53 +16,57 @@
     <div class="navbar">
         <a href="index.html">Hjem</a>
         <a href="oversetter.html">Binære</a>
-        <a href="/tegnsett">Tegnsett</a>
+        <a href="tegnsett.html">Tegnsett</a>
     </div>
-    <div class="hovedoversetter">
-        <div id="kalkulator">
+
+    <div id="hovedoversetter">
+        <div class="kalkulator" id="kalk1">
             <p id="kalktop">Vanlig tall <i class="fa-solid fa-arrow-right-long"></i> Binært Tall</p>
             <div id="kalkinput">
                 <form onsubmit="konvertervanlig()">
                     <input type="number" id="inputvanlig" placeholder="Vanlig Tall">
                 </form>
+            </div>
+            <div id="resultat">
                 <p id="resultatvanlig"><br></p>
             </div>
-
         </div>
-        <div id="kalkulator">
-            <p id="kalktop">Vanlig tall <i class="fa-solid fa-arrow-left-long"></i> Binært Tall</p>
+        <div class="kalkulator" id="kalk2">
+            <p id="kalktop">Binært tall <i class="fa-solid fa-arrow-right-long"></i> Vanlig tall</p>
             <div id="kalkinput">
                 <form onsubmit="konverterbinare()">
                     <input type="number" id="inputbinare" placeholder="Binært Tall">
                 </form>
+            </div>
+            <div id="resultat">
                 <p id="resultatbinare"><br></p>
             </div>
-    </div>
+        </div>
 
-    <script>
+        <script>
 
-        function konvertervanlig() {
-            event.preventDefault();
-            const svar = document.getElementById("inputvanlig").value;
-            const nummer = parseInt(svar);
-            if (isNaN(nummer)) {
-                alert("Venligst skriv inn et tall")
-            } else {
-                const binartall = nummer.toString(2);
-                document.getElementById("resultatvanlig").innerHTML = binartall;
+            function konvertervanlig() {
+                event.preventDefault();
+                const svar = document.getElementById("inputvanlig").value;
+                const nummer = parseInt(svar);
+                if (isNaN(nummer)) {
+                    alert("Venligst skriv inn et tall")
+                } else {
+                    const binartall = nummer.toString(2);
+                    document.getElementById("resultatvanlig").innerHTML = binartall;
+                }
             }
-        }
 
-        function konverterbinare() {
-            event.preventDefault();
-            const svar = document.getElementById("inputbinare").value;
-            const nummer = parseInt(svar,2);
-            if (isNaN(nummer)) {
-                alert("Venligst skriv inn et gyldig tall")
-            } else {
-                document.getElementById("resultatbinare").innerHTML = nummer;
+            function konverterbinare() {
+                event.preventDefault();
+                const svar = document.getElementById("inputbinare").value;
+                const nummer = parseInt(svar, 2);
+                if (isNaN(nummer)) {
+                    alert("Venligst skriv inn et gyldig tall")
+                } else {
+                    document.getElementById("resultatbinare").innerHTML = nummer;
+                }
             }
-        }
-    </script>
+        </script>
 
 </html>
