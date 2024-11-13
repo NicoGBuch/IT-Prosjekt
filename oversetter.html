@@ -21,6 +21,17 @@
 
     <div id="hovedoversetter">
         <div id="kalktekst">
+            <p>Binære tall fungerer ved å bruke to symboler, 1 og 0, der 1 betyr "på" (eller aktiv) og 0 betyr "av" (eller inaktiv). Dette systemet kalles et totallsystem, fordi det kun bruker to verdier. For å konvertere et binært tall til et vanlig (desimalt) tall, må hver plassering (eller "bit") i det binære tallet multipliseres med 2 opphøyd i posisjonens plassverdi, fra høyre til venstre.
+                <br>
+                For eksempel:
+                <br>
+                Binært tall: 1011
+                <br>
+                1 i den siste plassen (2^0) gir 1 x 1 = 1
+                1 i nest siste plassen (2^1) gir 1 × 2 = 2
+                0 i tredje siste plassen (2^2) gir 0 × 4 = 0
+                1 i fjerde siste plassen (2^3) gir 1 × 8 = 8
+                Så legger vi sammen alle verdiene: 8 + 0 + 2 + 1 = 11 i desimalt.</p>
             <table>
                 <thead>
                     <tr>
@@ -111,8 +122,8 @@
         <div class="kalkulator" id="kalk1">
             <p id="kalktop">Vanlig tall <i class="fa-solid fa-arrow-right-long"></i> Binært Tall</p>
             <div id="kalkinput">
-                <form onsubmit="konvertervanlig()">
-                    <input type="number" id="inputvanlig" placeholder="Vanlig Tall">
+                <form onsubmit="konvertervanlig()" >
+                    <input type="number" id="inputvanlig" placeholder="Vanlig Tall" >
                 </form>
             </div>
             <div id="resultat">
