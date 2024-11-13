@@ -20,8 +20,21 @@
     </div>
 
     <div class="hovedoversetter">
+        <h2>ASCII</h2>
+        <p>
+            Et tegnsett er en standard som definerer hvordan ulike tegn som bokstaver, tall og symboler skal representeres binært.
+            ASCII er et grunnleggende tegnsett som tildeler hvert tegn en binær verdi fra 0 til 127, slik at bokstaven "A" for eksempel representeres som 01000001.
+        </p>
+
+        <h2>Unicode</h2>
+        <p>
+            For å håndtere tegn fra ulike språk og spesialtegn som ikke dekkes av ASCII, brukes ofte Unicode.
+            Unicode har en mer omfattende koding, med formater som UTF-8, som kan bruke 1 til 4 bytes per tegn.
+            Dette gjør det mulig for ulike systemer å tolke og vise tekst korrekt uavhengig av språk eller spesialtegn.
+        </p>
+
         <div id="kalkulator">
-            <p id="kalktop">Vanlig tall <i class="fa-solid fa-arrow-right-long"></i> Binært Tall</p>
+            <p id="kalktop">Vanlig tall <i class="fa-solid fa-arrow-right-long"></i> Bokstaver</p>
             <div id="kalkinput">
                 <form onsubmit="konvertervanlig()">
                     <input type="number" id="inputvanlig" placeholder="Vanlig Tall">
@@ -32,10 +45,10 @@
             </div>
         </div>
         <div id="kalkulator">
-            <p id="kalktop">Binært tall <i class="fa-solid fa-arrow-right-long"></i> Vanlig tall</p>
+            <p id="kalktop">Bokstaver <i class="fa-solid fa-arrow-right-long"></i> Vanlig tall</p>
             <div id="kalkinput">
                 <form onsubmit="konverterbinare()">
-                    <input type="number" id="inputbinare" placeholder="Binært Tall">
+                    <input type="text" id="inputbinare" placeholder="Tekst">
                 </form>
             </div>
             <div id="resultat">
@@ -47,25 +60,26 @@
 
             function konvertervanlig() {
                 event.preventDefault();
-                const svar = document.getElementById("inputvanlig").value;
-                const nummer = parseInt(svar);
-                if (isNaN(nummer)) {
-                    alert("Venligst skriv inn et tall")
+                const tall = parseInt(document.getElementById("inputvanlig").value);
+                const tekst = String.fromCharCode(tall);
+                console.log(tekst);
+                if (tekst == undefined) {
+                    alert("Venligst skriv inn et gyldig tall")
                 } else {
-                    const binartall = nummer.toString(2);
-                    document.getElementById("resultatvanlig").innerHTML = binartall;
+                    document.getElementById("resultatvanlig").innerHTML = tekst;
                 }
             }
 
             function konverterbinare() {
                 event.preventDefault();
-                const svar = document.getElementById("inputbinare").value;
-                const nummer = parseInt(svar, 2);
-                if (isNaN(nummer)) {
-                    alert("Venligst skriv inn et gyldig tall")
-                } else {
-                    document.getElementById("resultatbinare").innerHTML = nummer;
+                const tekst = document.getElementById("inputbinare").value;
+
+                let tall = "";
+                for (let i = 0; i < tekst.length; i++) {
+                    tall += tekst.charAt(i).charCodeAt(0) + " ";
                 }
+
+                document.getElementById("resultatbinare").innerHTML = tall;
             }
         </script>
 
