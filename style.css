@@ -24,6 +24,15 @@ img {
     font-weight: 100;
     font-size: 40px;
     text-align: center;
+    margin-top: 50px;
+}
+
+#subtitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 50;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .navbar {
@@ -144,12 +153,9 @@ input{
 
 .gridbox div{
     border: 2px solid black;
-    background-color: lightgreen;
     font-size: 30px;
     padding: 20px;
-    color: green;
     border-radius: 10px;
-
 }
 
 
@@ -162,7 +168,7 @@ input{
 #boks3{
     grid-row: 1/3;
     grid-column: 3;
-    background-image: url("https://cdn.pixabay.com/photo/2022/05/24/14/15/binary-code-7218631_1280.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2014/10/05/19/02/binary-code-475664_1280.jpg");
     background-size: cover;
 }
 
@@ -174,7 +180,7 @@ input{
 
 #boks4{
     grid-row: 2/4;
-    background-image:url("https://cdn.pixabay.com/photo/2021/09/09/04/38/binary-6609473_1280.jpg");
+    background-image:url("https://cdn.pixabay.com/photo/2016/04/08/16/06/binary-1316395_1280.jpg");
     background-size: cover;
 }
 
@@ -182,6 +188,6 @@ input{
     width: 100%;
     height: 1000px;
     margin-top: 100px;
-    background-color: #001e00;
+    background-color: #001b1b;
 
 }
