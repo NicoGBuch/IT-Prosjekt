@@ -14,13 +14,13 @@
 
 <body class="oversetter">
     <div class="navbar">
-        <a href="/">Hjem</a>
-        <a href="/oversetter">Binære</a>
-        <a href="/tegnsett">Tegnsett</a>
+        <a href="index.html">Hjem</a>
+        <a href="oversetter.html">Binære</a>
+        <a href="tegnsett.html">Tegnsett</a>
     </div>
 
-    <div class="hovedoversetter">
-        <div id="kalkulator">
+    <div id="hovedoversetter">
+        <div class="kalkulator" id="kalk1">
             <p id="kalktop">Vanlig tall <i class="fa-solid fa-arrow-right-long"></i> Binært Tall</p>
             <div id="kalkinput">
                 <form onsubmit="konvertervanlig()">
@@ -31,7 +31,7 @@
                 <p id="resultatvanlig"><br></p>
             </div>
         </div>
-        <div id="kalkulator">
+        <div class="kalkulator" id="kalk2">
             <p id="kalktop">Binært tall <i class="fa-solid fa-arrow-right-long"></i> Vanlig tall</p>
             <div id="kalkinput">
                 <form onsubmit="konverterbinare()">
