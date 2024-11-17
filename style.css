@@ -18,10 +18,11 @@ img {
 }
 
 ul {
+    list-style-type: none; 
     text-align: center;
     margin: 60px auto 0;
     width: fit-content;
-    font-size: 18;
+    font-size: 1.2em;
 }
 li {
     margin-bottom: 10px;
