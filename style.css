@@ -17,6 +17,16 @@ img {
     width: 100%;
 }
 
+ul {
+    list-style-type: disc;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+}
+li {
+    margin-bottom: 10px;
+}
+
 #title {
     font-family: Audiowide;
     font-weight: 100;
