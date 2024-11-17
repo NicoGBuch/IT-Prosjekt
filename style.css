@@ -19,8 +19,9 @@ img {
 
 ul {
     text-align: center;
-    margin: 40px auto 0;
+    margin: 60px auto 0;
     width: fit-content;
+    font-size: 18;
 }
 li {
     margin-bottom: 10px;
