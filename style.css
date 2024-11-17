@@ -18,9 +18,8 @@ img {
 }
 
 ul {
-    list-style-type: disc;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto 0;
     width: fit-content;
 }
 li {
