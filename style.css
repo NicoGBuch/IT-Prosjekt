@@ -275,7 +275,6 @@ input {
 @media(width < 850px) {
     #hovedoversetter {
         grid-template-columns: 100%;
-        grid-template-rows: 60vh 40vh 40vh;
     }
 
     #hovedoversetter::before {
@@ -309,7 +308,7 @@ input {
         font-size: 20px;
         border-radius: 5px;
         border: none;
-        background-color: var(--background-color);
+        background-color: var(--font-color);
         padding: 5px;
     }
 
@@ -333,12 +332,11 @@ input {
 
 @media(width < 605px) {
     .oversetter {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     #hovedoversetter {
         grid-template-columns: 100%;
-        grid-template-rows: 40vh 40vh 40vh;
         padding: 10px;
     }
 
@@ -358,12 +356,18 @@ input {
 
     .kalkulator {
         grid-column: 1/2;
-        width: 80%;
-        grid-template-columns: auto;
-        grid-template-rows: 50px 40% 40%;
-        background-color: var(--background-color);
-        border: 1px solid var(--font-color);
-        border-radius: 10px;
+        width: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 100px 100px;
+
+    }
+
+    #kalkinput{
+        grid-row: 2/3;
+    }
+
+    #resultat{
+        grid-row: 3/4;
     }
 
     #kalk2 {
@@ -386,15 +390,29 @@ input {
     .gridbox {
         grid-template-columns: 300px 250px 300px;
     }
+    ul{
+        font-size: 15px;
+    }
 } 
 
-@media(width < 500px){
-    #hovedoversetter{
-        display: none;
+@media(width < 340px){
+    #kalktop{
+        font-size: 15px;
     }
-    #skjulttekst{
-        display: inline;
-        text-align: center;
-        
+    .navbar a{
+        font-size: 15px;
+        padding: 8px;
+    }
+    ul{
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    #resultatvanlig,
+    #resultatbinare,
+    input{
+        height: 20px;
+        width: 150px;
+        font-size: 10px;
     }
 }

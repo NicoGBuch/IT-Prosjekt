@@ -18,8 +18,6 @@
         <a href="oversetter.html">Binære</a>
         <a href="tegnsett.html">Tegnsett</a>
     </div>
-    <div id="skjulttekst">
-        <h1>Du har for liten mobil eller for liten skjerm. Kjøp ny eller fiks det</h1>
     <div id="hovedoversetter">
         <div id="tekst">
             <div>
@@ -34,13 +32,15 @@
                     for eksempel representeres som 01000001.
                 </p>
                 <br>
-                <h2>Unicode</h2>
-                <p>
-                    For å håndtere tegn fra ulike språk og spesialtegn som ikke dekkes av ASCII, brukes ofte Unicode.
-                    Unicode har en mer omfattende koding, med formater som UTF-8, som kan bruke 1 til 4 bytes per tegn.
-                    Dette gjør det mulig for ulike systemer å tolke og vise tekst korrekt uavhengig av språk eller
-                    spesialtegn.
-                </p>
+                    <h2>Unicode</h2>
+                    <p>
+                        For å håndtere tegn fra ulike språk og spesialtegn som ikke dekkes av ASCII, brukes ofte
+                        Unicode.
+                        Unicode har en mer omfattende koding, med formater som UTF-8, som kan bruke 1 til 4 bytes per
+                        tegn.
+                        Dette gjør det mulig for ulike systemer å tolke og vise tekst korrekt uavhengig av språk eller
+                        spesialtegn.
+                    </p>
             </div>
         </div>
         <table cellpadding="3" cellspacing="1">
@@ -182,32 +182,32 @@
                 <p id="resultatbinare"><br></p>
             </div>
         </div>
+    </div>
+    <script>
 
-        <script>
+        function konvertervanlig() {
+            event.preventDefault();
+            const tall = parseInt(document.getElementById("inputvanlig").value);
+            const tekst = String.fromCharCode(tall);
+            console.log(tekst);
+            if (tekst == undefined) {
+                alert("Venligst skriv inn et gyldig tall")
+            } else {
+                document.getElementById("resultatvanlig").innerHTML = tekst;
+            }
+        }
 
-            function konvertervanlig() {
-                event.preventDefault();
-                const tall = parseInt(document.getElementById("inputvanlig").value);
-                const tekst = String.fromCharCode(tall);
-                console.log(tekst);
-                if (tekst == undefined) {
-                    alert("Venligst skriv inn et gyldig tall")
-                } else {
-                    document.getElementById("resultatvanlig").innerHTML = tekst;
-                }
+        function konverterbinare() {
+            event.preventDefault();
+            const tekst = document.getElementById("inputbinare").value;
+
+            let tall = "";
+            for (let i = 0; i < tekst.length; i++) {
+                tall += tekst.charAt(i).charCodeAt(0) + " ";
             }
 
-            function konverterbinare() {
-                event.preventDefault();
-                const tekst = document.getElementById("inputbinare").value;
-
-                let tall = "";
-                for (let i = 0; i < tekst.length; i++) {
-                    tall += tekst.charAt(i).charCodeAt(0) + " ";
-                }
-
-                document.getElementById("resultatbinare").innerHTML = tall;
-            }
-        </script>
+            document.getElementById("resultatbinare").innerHTML = tall;
+        }
+    </script>
 
 </html>
