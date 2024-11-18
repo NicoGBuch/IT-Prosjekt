@@ -92,7 +92,7 @@ h2 {
     height: 150%;
     background-image: url(https://pa1.aminoapps.com/6619/7a378d1280930c935a09ae5338a7fdec795e42c1_00.gif);
     background-size: cover;
-    filter: blur(10px) brightness(0.7);;
+    filter: blur(10px) brightness(0.7);
     z-index: -1;
 }
 
@@ -196,7 +196,7 @@ input {
     gap: 20px;
     padding-top: 50px;
     justify-content: center;
-
+    overflow: hidden;
 }
 
 .gridbox div {
