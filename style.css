@@ -182,6 +182,9 @@ input {
     justify-content: center;
     align-items: center;
 }
+#skjulttekst{
+    display: none;
+}
 
 
 .gridbox {
@@ -369,3 +372,12 @@ input {
         grid-template-columns: 300px 250px 300px;
     }
 } 
+
+@media(width < 500px){
+    .oversetter{
+        display: none;
+    }
+    #skjulttekst{
+        display: block;
+    }
+}
