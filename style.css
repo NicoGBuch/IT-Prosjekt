@@ -366,6 +366,6 @@ input {
     }
 
     .gridbox {
-        grid-template-columns: 300px 500px 300px;
+        grid-template-columns: 300px 250px 300px;
     }
 }  
