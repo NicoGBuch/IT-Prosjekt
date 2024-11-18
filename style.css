@@ -77,15 +77,9 @@ h2 {
     margin: auto;
     display: grid;
     grid-template-columns: 50% 50%;
-<<<<<<< HEAD
     grid-template-rows: 50vh 40vh 40vh;
     padding: 40px 70px 0px 40px;
     gap: 30px;
-=======
-    grid-template-rows: auto 40vh 40vh;
-    padding: 40px 50px 0px 40px;
-    gap: 10px;
->>>>>>> acf1ddf5a5a91095d505935dedcb6aadd32cc44c
 }
 
 
@@ -373,3 +367,4 @@ input {
     .gridbox {
         grid-template-columns: 300px 500px 300px;
     }
+}
