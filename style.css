@@ -18,9 +18,11 @@ img {
 }
 
 ul {
+    list-style-type: none; 
     text-align: center;
-    margin: 20px auto 0;
+    margin: 60px auto 0;
     width: fit-content;
+    font-size: 1.2em;
 }
 
 li {
@@ -368,4 +370,4 @@ input {
     .gridbox {
         grid-template-columns: 300px 500px 300px;
     }
-}
+}  
