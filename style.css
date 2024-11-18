@@ -356,4 +356,11 @@ input {
         justify-content: center;
         align-items: center;
     }
-}
+
+    #boks1, #boks3{
+         visibility: hidden;
+    }
+
+    .gridbox {
+        grid-template-columns: 300px 500px 300px;
+    }
