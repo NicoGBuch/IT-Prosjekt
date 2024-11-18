@@ -22,8 +22,13 @@ ul {
     margin: 20px auto 0;
     width: fit-content;
 }
+
 li {
     margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 5px;
 }
 
 #title {
