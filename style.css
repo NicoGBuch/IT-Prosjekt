@@ -389,10 +389,12 @@ input {
 } 
 
 @media(width < 500px){
-    .oversetter{
+    #hovedoversetter{
         display: none;
     }
     #skjulttekst{
         display: inline;
+        text-align: center;
+        
     }
 }
