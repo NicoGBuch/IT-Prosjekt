@@ -21,7 +21,10 @@
 
     <div id="hovedoversetter">
         <div id="kalktekst">
-            <p>Binære tall fungerer ved å bruke to symboler, 1 og 0, der 1 betyr "på" (eller aktiv) og 0 betyr "av" (eller inaktiv). Dette systemet kalles et totallsystem, fordi det kun bruker to verdier. For å konvertere et binært tall til et vanlig (desimalt) tall, må hver plassering (eller "bit") i det binære tallet multipliseres med 2 opphøyd i posisjonens plassverdi, fra høyre til venstre.
+            <p>Binære tall fungerer ved å bruke to symboler, 1 og 0, der 1 betyr "på" (eller aktiv) og 0 betyr "av"
+                (eller inaktiv). Dette systemet kalles et totallsystem, fordi det kun bruker to verdier. For å
+                konvertere et binært tall til et vanlig (desimalt) tall, må hver plassering (eller "bit") i det binære
+                tallet multipliseres med 2 opphøyd i posisjonens plassverdi, fra høyre til venstre.
                 <br>
                 For eksempel:
                 <br>
@@ -31,99 +34,100 @@
                 1 i nest siste plassen (2^1) gir 1 × 2 = 2
                 0 i tredje siste plassen (2^2) gir 0 × 4 = 0
                 1 i fjerde siste plassen (2^3) gir 1 × 8 = 8
-                Så legger vi sammen alle verdiene: 8 + 0 + 2 + 1 = 11 i desimalt.</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Binær verdi</th>
-                        <th>Desimalverdien</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>1</td>
-                    </tr>
-        
-                    <tr>
-                        <td>2</td>
-                        <td>10</td>
-                    </tr>
-        
-                    <tr>
-                        <td>3</td>
-                        <td>11</td>
-                    </tr>
-        
-                    <tr>
-                        <td>4</td>
-                        <td>100</td>
-                    </tr>
-        
-                    <tr>
-                        <td>5</td>
-                        <td>101</td>
-                    </tr>
-        
-                    <tr>
-                        <td>6</td>
-                        <td>110</td>
-                    </tr>
-        
-                    <tr>
-                        <td>7</td>
-                        <td>111</td>
-                    </tr>
-        
-                    <tr>
-                        <td>8</td>
-                        <td>1000</td>
-                    </tr>
-        
-                    <tr>
-                        <td>9</td>
-                        <td>1001</td>
-                    </tr>
-        
-                    <tr>
-                        <td>10</td>
-                        <td>1010</td>
-                    </tr>
-        
-                    <tr>
-                        <td>15</td>
-                        <td>1111</td>
-                    </tr>
-        
-                    <tr>
-                        <td>50</td>
-                        <td>110010</td>
-                    </tr>
-        
-                    <tr>
-                        <td>100</td>
-                        <td>1100100</td>
-                    </tr>
-        
-                    <tr>
-                        <td>125</td>
-                        <td>1111101</td>
-                    </tr>
-        
-                    <tr>
-                        <td>1000</td>
-                        <td>1111101000</td>
-                    </tr>
-        
-        
-                </tbody>
-            </table>    
+                Så legger vi sammen alle verdiene: 8 + 0 + 2 + 1 = 11 i desimalt.
+            </p>
         </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Binær verdi</th>
+                    <th>Desimalverdien</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>10</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>11</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>100</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>101</td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>110</td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td>111</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td>1000</td>
+                </tr>
+
+                <tr>
+                    <td>9</td>
+                    <td>1001</td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td>1010</td>
+                </tr>
+
+                <tr>
+                    <td>15</td>
+                    <td>1111</td>
+                </tr>
+
+                <tr>
+                    <td>50</td>
+                    <td>110010</td>
+                </tr>
+
+                <tr>
+                    <td>100</td>
+                    <td>1100100</td>
+                </tr>
+
+                <tr>
+                    <td>125</td>
+                    <td>1111101</td>
+                </tr>
+
+                <tr>
+                    <td>1000</td>
+                    <td>1111101000</td>
+                </tr>
+
+
+            </tbody>
+        </table>
         <div class="kalkulator" id="kalk1">
             <p id="kalktop">Vanlig tall <i class="fa-solid fa-arrow-right-long"></i> Binært Tall</p>
             <div id="kalkinput">
-                <form onsubmit="konvertervanlig()" >
-                    <input type="number" id="inputvanlig" placeholder="Vanlig Tall" >
+                <form onsubmit="konvertervanlig()">
+                    <input type="number" id="inputvanlig" placeholder="Vanlig Tall">
                 </form>
             </div>
             <div id="resultat">
