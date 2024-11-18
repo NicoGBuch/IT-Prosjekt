@@ -69,12 +69,15 @@ h2 {
 
 */
 
+.oversetter h2{
+    text-align: center;
+}
 
 #hovedoversetter {
     margin: auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 40vh 40vh 40vh;
+    grid-template-rows: 50vh 40vh 40vh;
     padding: 40px 50px 0px 40px;
     gap: 10px;
 }
@@ -118,6 +121,8 @@ th {
     padding: 10px;
     border: 1px solid #DDE2C6;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .kalkulator {
@@ -254,7 +259,7 @@ input {
     height: 200px;
 }
 
-@media(width < 800px){
+@media(width <850px){
     #hovedoversetter {
         grid-template-columns: 100%;
         grid-template-rows: 50vh 40vh 40vh;
