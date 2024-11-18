@@ -314,6 +314,15 @@ input {
         font-size: 23px;
         grid-column: 1/3;
     }
+
+    #boks1,
+    #boks3 {
+        visibility: hidden;
+    }
+
+    .gridbox {
+        grid-template-columns: 300px 450px 300px;
+    }
 }
 
 @media(width < 605px) {
