@@ -344,19 +344,7 @@ input {
         height: 205%;
     }
 
-    table {
-        width: 80%;
-        grid-row: 4/5;
-    }
-
-    #tekst {
-        grid-row: 1/2;
-        grid-column: 1/2;
-    }
-
     .kalkulator {
-        grid-column: 1/2;
-        width: 100%;
         grid-template-columns: 100%;
         grid-template-rows: 50px 100px 100px;
 
@@ -370,9 +358,7 @@ input {
         grid-row: 3/4;
     }
 
-    #kalk2 {
-        grid-row: 3/4;
-    }
+    
 
     #kalktop {
         display: flex;
