@@ -18,17 +18,12 @@ function tidSidenStart() {
 }
 
 function start() {
-    const random = Math.floor(Math.random() * 10) + 1;
-    const random2 = Math.floor(Math.random() * 10) + 1;
-    type = Math.floor(Math.random() * 2) + 1;
-
-    if (type == 1){
-        document.getElementById("p2").innerHTML = random + " + " + random2;
-        rettSvar = random + random2 
-    } else if(type == 2){
-        document.getElementById("p2").innerHTML = random + " * " + random2;
-        rettSvar = random * random2 
-    }
+    const random = Math.floor(Math.random() * 20) + 1;
+    const nummer = parseInt(random);
+    const binartall = nummer.toString(2);
+    
+    document.getElementById("p2").innerHTML = binartall;
+    rettSvar = random
 
     box.classList.remove("tallFall");
     void box.offsetWidth;
@@ -37,6 +32,12 @@ function start() {
     if (!tidInterval) {
         tidInterval = setInterval(tidSidenStart, 1000);
     }
+}
+
+function konvertervanlig() {
+    const nummer = parseInt(svar);
+        const binartall = nummer.toString(2);
+        document.getElementById("resultatvanlig").innerHTML = binartall;
 }
 
 function ror() {
@@ -126,8 +127,8 @@ function ror3() {
 
 function finnPosisjon() {
     const sky = document.getElementById("sky");
-    const rect = sky.getBoundingClientRect();
-    let hoydeForhold = Math.round(rect.top / window.innerHeight * 1000);
+    const posisjon = sky.getBoundingClientRect();
+    let hoydeForhold = Math.round(posisjon.top / window.innerHeight * 1000);
     if (hoydeForhold >= 720) {
         score -= 5;
         document.getElementById("score").innerHTML = score;
@@ -136,10 +137,13 @@ function finnPosisjon() {
         void box.offsetWidth;
         box.classList.add("tallFall");
     }
-    tapt()
+    if (score < 0) {
+        tapt();
+    }
+}
 
 setInterval(finnPosisjon, 0)
-}
+
 
 
 function tapt() {
