@@ -34,11 +34,6 @@ function start() {
     }
 }
 
-function konvertervanlig() {
-    const nummer = parseInt(svar);
-        const binartall = nummer.toString(2);
-        document.getElementById("resultatvanlig").innerHTML = binartall;
-}
 
 function ror() {
     rett = Math.floor(Math.random() * 3) + 1;
