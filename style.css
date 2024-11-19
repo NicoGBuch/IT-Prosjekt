@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=DynaPuff:wght@400..700&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@font-face {
+    font-family: Digital;
+    src: url(fonter/digital-7/digital-7.ttf);
+}
 
 * {
     margin: 0;
@@ -12,7 +20,7 @@
     --background-color: #171423;
     --background-color2: #001b1b;
     --font-color: #DDE2C6;
-}  
+}
 
 body {
     background-color: var(--background-color);
@@ -24,7 +32,7 @@ img {
 }
 
 ul {
-    list-style-type: none; 
+    list-style-type: none;
     text-align: center;
     margin: 60px auto 0;
     width: fit-content;
@@ -188,7 +196,8 @@ input {
     justify-content: center;
     align-items: center;
 }
-#skjulttekst{
+
+#skjulttekst {
     display: none;
 }
 
@@ -263,13 +272,202 @@ input {
     height: 200px;
 }
 
-@media(width < 1200px) {
+/*
 
-    #resultatvanlig,
-    #resultatbinare,
-    input {
-        width: 130px;
+spill.html
+
+*/
+
+.spill body {
+    overflow: hidden;
+}
+
+.spill h1 {
+    font-family: 'Black Ops One';
+    font-size: 50px;
+    color: var(--font-color);
+}
+
+.spill p {
+    font-family: Digital, Orbitron;
+    font-size: 30px;
+    color: var(--background-color);
+
+}
+
+.main {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 10vh 70vh 5vh 15vh;
+
+}
+
+.spill header {
+    background-color: var(--background-color);
+    grid-column: 1/4;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: DynaPuff;
+    font-size: 30px;
+}
+
+#venstre {
+    grid-row: 2/4;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+#sky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-image: url(bilder/sky.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 100px;
+    top: -110px;
+    position: relative;
+    z-index: 0;
+    animation-timing-function: linear;
+    font-family: DynaPuff;
+}
+
+.tallFall {
+    animation: box 10s forwards;
+}
+
+
+@keyframes box {
+    0% {
+        top: -110px;
+        left: calc(50% - 75px);
     }
+
+    100% {
+        top: 100%;
+        left: calc(50% - 75px);
+    }
+}
+
+#midten>h1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-family: 'Black Ops One';
+    background-color: var(--background-color);
+    z-index: 100;
+    font-size: 100px;
+}
+
+#scoreboard {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 80%;
+}
+
+button {
+    width: 100px;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black inset;
+    background-color: antiquewhite;
+    font-family: DynaPuff;
+    font-size: 20px;
+}
+
+#score {
+    background-color: antiquewhite;
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: auto;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px black inset;
+    font-family: DynaPuff;
+    font-size: 20px;
+}
+
+#høyre {
+    grid-row: 2/4;
+    grid-column: 3/4;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.rør {
+    grid-column: 2/3;
+    background-color: var(--background-color);
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rør>div {
+    background-image: url(bilder/rør.png);
+    height: 5vh;
+    width: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    font-weight: 1000;
+}
+
+#bunn {
+    background-color: var(--background-color);
+    grid-column: 1/4;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+#tidBox {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+@media(width < 1000px) {
+    .spill h1 {
+        font-size: 20px;
+    }
+
+    .spill header {
+        font-size: 20px;
+    }
+
+    .main {
+        grid-template-columns: 15% auto 15%;
+        grid-template-rows: 10vh 70vh 5vh 15vh;
+
+    }
+
+    #midten>h1 {
+        font-size: 50px;
+    }
+
 }
 
 @media(width < 850px) {
@@ -330,6 +528,87 @@ input {
     }
 }
 
+@media(width < 500px) {
+    .spill body {
+        overflow: scroll;
+    }
+
+    .spill h1 {
+        font-size: 10px;
+    }
+
+    .spill p {
+        font-size: 20px;
+    }
+
+    .spill header {
+        font-size: 10px;
+    }
+
+    .main {
+        grid-template-columns: auto;
+        grid-template-rows: 7vh 8vh 68vh 5vh 7vh 8vh;
+
+    }
+
+    #midten>h1 {
+        font-size: 30px;
+    }
+
+    #venstre {
+        grid-row: 2/3;
+        grid-column: 1/4;
+        position: relative;
+        z-index: 100;
+        background-color: rgb(173, 219, 208);
+    }
+
+    #midten {
+        grid-column: 1/4;
+    }
+
+    #høyre {
+        grid-row: 5/6;
+        grid-column: 1/4;
+    }
+
+    .rør>div {
+        background-image: url(bilder/rør.png);
+        height: 5vh;
+        width: 50px;
+        padding-top: 3px;
+    }
+
+    #sky {
+        font-size: 15px;
+        width: 70px;
+        height: 40px;
+        top: -110px;
+    }
+
+    @keyframes box {
+        0% {
+            top: -10%;
+            left: calc(50% - 35px);
+        }
+
+        100% {
+            top: 100%;
+            left: calc(50% - 35px);
+        }
+    }
+
+    .rør {
+        grid-column: 1/4;
+        justify-content: space-around;
+    }
+
+    button {
+        width: 50px;
+        font-size: 10px;
+    }
+}
+
 @media(width < 605px) {
     .oversetter {
         font-size: 12px;
@@ -350,15 +629,15 @@ input {
 
     }
 
-    #kalkinput{
+    #kalkinput {
         grid-row: 2/3;
     }
 
-    #resultat{
+    #resultat {
         grid-row: 3/4;
     }
 
-    
+
 
     #kalktop {
         display: flex;
@@ -376,27 +655,30 @@ input {
     .gridbox {
         grid-template-columns: 300px 250px 300px;
     }
-    ul{
-        font-size: 15px;
-    }
-} 
 
-@media(width < 340px){
-    #kalktop{
+    ul {
         font-size: 15px;
     }
-    .navbar a{
+}
+
+@media(width < 340px) {
+    #kalktop {
+        font-size: 15px;
+    }
+
+    .navbar a {
         font-size: 15px;
         padding: 8px;
     }
-    ul{
+
+    ul {
         font-size: 10px;
         padding: 5px;
     }
 
     #resultatvanlig,
     #resultatbinare,
-    input{
+    input {
         height: 20px;
         width: 150px;
         font-size: 10px;
