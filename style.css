@@ -263,6 +263,16 @@ input {
     height: 200px;
 }
 
+footer {
+    color: var(--font-color);
+    margin: 40px;
+}
+
+footer a {
+    color: inherit;
+    text-decoration-line: none;
+}
+
 @media(width < 1200px) {
 
     #resultatvanlig,
