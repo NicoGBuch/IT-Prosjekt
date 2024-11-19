@@ -21,6 +21,26 @@ body {
     color: var(--font-color);
 }
 
+footer {
+    color: var(--font-color);
+    margin: 24px 0 24px 0;
+    font-size: 14px;
+    background-color: var(--background-color);
+}
+
+footer a {
+    color: inherit;
+    /* text-decoration-line: none; */
+}
+
+footer ul {
+    margin-top: 0;
+}
+
+footer li {
+    margin-bottom: 4px;
+}
+
 img {
     width: 100%;
 }
