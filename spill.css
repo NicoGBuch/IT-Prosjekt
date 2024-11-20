@@ -23,6 +23,7 @@
     font-weight: 100;
 }
 
+
 .spill p {
     font-size: 30px;
     color: var(--background-color);
@@ -72,7 +73,7 @@
 }
 
 .tallFall {
-    animation: box 15s forwards;
+    animation: box 20s forwards;
 }
 
 
