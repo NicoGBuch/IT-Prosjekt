@@ -297,13 +297,12 @@ input {
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 #footer-heading {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 2rem;
     color: #DDE2C6;
     font-family: "Poppins", serif;
@@ -313,12 +312,10 @@ input {
     padding: 10px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
 }
 
 #footer-box {
-    position: absolute;
-    bottom: 10%;
-    left: 40%;
     font-size: 1.2rem;
     color: #DDE2C6;
     font-family: "Poppins", serif;
@@ -342,44 +339,8 @@ input {
     line-height: 1.5;
 }
 
-/* Media queries */
-@media (max-width: 768px) {
-    #bildefooter {
-        height: 500px;
-    }
 
-    #footer-heading {
-        top: 8%;
-        font-size: 1.5rem;
-        padding: 8px 16px;
-    }
 
-    #footer-box {
-        font-size: 1rem;
-        width: 50%;
-        bottom: 8%;
-        left: 8%;
-    }
-}
-
-@media (max-width: 480px) {
-    #bildefooter {
-        height: 400px;
-    }
-
-    #footer-heading {
-        top: 5%;
-        font-size: 1.2rem;
-        padding: 6px 12px;
-    }
-
-    #footer-box {
-        font-size: 0.9rem;
-        width: 60%;
-        bottom: 5%;
-        left: 5%;
-    }
-}
 
 @media(width < 850px) {
     #hovedoversetter {
@@ -439,6 +400,24 @@ input {
     }
 }
 
+@media (max-width: 768px) {
+    #bildefooter {
+        height: 500px;
+    }
+
+    #footer-heading {
+        top: 8%;
+        font-size: 1.5rem;
+        padding: 8px 16px;
+    }
+
+    #footer-box {
+        font-size: 1rem;
+        width: 50%;
+        bottom: 8%;
+        left: 8%;
+    }
+}
 
 @media(width < 605px) {
     .oversetter {
@@ -496,6 +475,22 @@ input {
     .navbar a{
         font-size: 17px;
         padding: 10px;
+    }
+    #bildefooter {
+        height: 400px;
+    }
+
+    #footer-heading {
+        top: 5%;
+        font-size: 1.2rem;
+        padding: 6px 12px;
+    }
+
+    #footer-box {
+        font-size: 0.9rem;
+        width: 60%;
+        bottom: 5%;
+        left: 5%;
     }
 }
 
