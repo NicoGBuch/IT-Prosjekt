@@ -340,7 +340,13 @@ input {
 }
 
 
-
+@media(width < 1200px){
+    #resultatvanlig,
+    #resultatbinare,
+    input{
+        width: 130px;
+    }
+}
 
 @media(width < 850px) {
     #hovedoversetter {
