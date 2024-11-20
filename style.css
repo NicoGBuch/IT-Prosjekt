@@ -282,10 +282,147 @@ input {
 }
 
 #bildefooter {
+    height: 600px;
+    width: 100%;
+    background-color: #f0f0f0;
     background-image: url("https://cdn.pixabay.com/photo/2017/09/03/09/08/binary-code-2709630_1280.jpg");
     background-size: cover;
-    box-shadow: 0px -10px 50px black;
-    height: 200px;
+    background-position: center;
+    position: relative;
+}
+
+#footer-heading {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #DDE2C6;
+    font-family: "Poppins", serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#footer-box {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    font-size: 1.2rem;
+    color: #DDE2C6;
+    font-family: "Poppins", serif;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 40%;
+    max-width: 300px;
+    text-align: left;
+}
+
+#footer-box ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+#footer-box li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+#footer-images {
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.footer-image-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-image {
+    width: 150px;
+    height: auto;
+    border: 3px solid #DDE2C6;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    #bildefooter {
+        height: 500px;
+    }
+
+    #footer-heading {
+        top: 8%;
+        font-size: 1.5rem;
+        padding: 8px 16px;
+    }
+
+    #footer-box {
+        font-size: 1rem;
+        width: 50%;
+        bottom: 8%;
+        left: 8%;
+    }
+
+    #footer-images {
+        top: 65%;
+        right: 5%;
+        gap: 20px;
+    }
+
+    .footer-image {
+        width: 120px;
+    }
+
+    .footer-image-row {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    #bildefooter {
+        height: 400px;
+    }
+
+    #footer-heading {
+        top: 5%;
+        font-size: 1.2rem;
+        padding: 6px 12px;
+    }
+
+    #footer-box {
+        font-size: 0.9rem;
+        width: 60%;
+        bottom: 5%;
+        left: 5%;
+    }
+
+    #footer-images {
+        top: 70%;
+        right: 2%;
+        gap: 15px;
+    }
+
+    .footer-image {
+        width: 100px;
+    }
+
+    .footer-image-row {
+        gap: 15px;
+    }
 }
 
 
