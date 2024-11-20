@@ -318,7 +318,7 @@ input {
 #footer-box {
     position: absolute;
     bottom: 10%;
-    left: 10%;
+    left: 40%;
     font-size: 1.2rem;
     color: #DDE2C6;
     font-family: "Poppins", serif;
@@ -328,7 +328,7 @@ input {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     width: 40%;
     max-width: 300px;
-    text-align: left;
+    text-align: center;
 }
 
 #footer-box ul {
@@ -340,33 +340,6 @@ input {
 #footer-box li {
     margin-bottom: 8px;
     line-height: 1.5;
-}
-#footer-images {
-    position: absolute;
-    top: 60%;
-    right: 10%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 30px;
-}
-
-.footer-image-row {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    height: 150px;
-    width:150px;
-}
-
-.footer-image {
-    width: 150px; /* Ekspisitt bredde */
-    height: 150px; /* Bevar proporsjoner */
-    border: 3px solid #DDE2C6;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-    flex-shrink: 0; /* Hindrer flex-baserte dimensjoner */
 }
 
 /* Media queries */
@@ -388,21 +361,6 @@ input {
         left: 8%;
     }
 
-    #footer-images {
-        top: 65%;
-        right: 5%;
-        gap: 20px;
-    }
-
-    .footer-image {
-        width: 120px;
-    }
-
-    .footer-image-row {
-        gap: 20px;
-    }
-}
-
 @media (max-width: 480px) {
     #bildefooter {
         height: 400px;
@@ -420,21 +378,6 @@ input {
         bottom: 5%;
         left: 5%;
     }
-
-    #footer-images {
-        top: 70%;
-        right: 2%;
-        gap: 15px;
-    }
-
-    .footer-image {
-        width: 100px;
-    }
-
-    .footer-image-row {
-        gap: 15px;
-    }
-}
 
 
 @media(width < 850px) {
