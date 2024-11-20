@@ -360,6 +360,7 @@ input {
         bottom: 8%;
         left: 8%;
     }
+}
 
 @media (max-width: 480px) {
     #bildefooter {
@@ -378,7 +379,7 @@ input {
         bottom: 5%;
         left: 5%;
     }
-
+}
 
 @media(width < 850px) {
     #hovedoversetter {
