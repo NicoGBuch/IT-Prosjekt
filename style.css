@@ -66,6 +66,7 @@ h2 {
     margin-top: 5px;
 }
 
+
 #title {
     font-family: Audiowide;
     font-weight: 100;
@@ -87,7 +88,7 @@ h2 {
     width: 100%;
 }
 
-.navbar a {
+.navbar a, #litennav a{
     font-size: 24px;
     text-decoration-line: none;
     color: inherit;
@@ -95,9 +96,35 @@ h2 {
     transition: color 0.1s ease-in-out;
 }
 
+.fa-bars{
+    font-size: 24px;
+    text-decoration-line: none;
+    color: inherit;
+    padding: 20px;
+    transition: color 0.1s ease-in-out;
+    display: none !important;
+    z-index: 500;
+}
+
+
 .navbar a:hover {
     color: #0F121A;
     background: linear-gradient(to top, var(--font-color), rgba(0, 0, 0, 0));
+}
+
+
+#litennav {
+    display: none; /* Skjult som standard */
+}
+#litennav.vis {
+    position: absolute;
+    background-color: #171423ec;
+    width: 100%;
+    height: 100vh;
+    display: flex; /* Vis navigasjon når denne klassen legges til */
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /*
@@ -479,8 +506,7 @@ input {
 
 @media(width < 475px){
     .navbar a{
-        font-size: 17px;
-        padding: 10px;
+        display: none;
     }
     #bildefooter {
         height: 400px;
@@ -497,6 +523,11 @@ input {
         width: 60%;
         bottom: 5%;
         left: 5%;
+    }
+    .fa-bars{
+        display: inline !important;
+        margin-left: auto;
+        font-size: 30px;
     }
 }
 

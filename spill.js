@@ -1,4 +1,14 @@
-
+function litennav() {
+    const nav = document.getElementById("litennav");
+    const body = document.body;
+    if (nav.classList.contains("vis")) {
+        nav.classList.remove("vis");
+        body.style.overflow = "auto"; 
+    } else {
+        nav.classList.add("vis");
+        body.style.overflow = "hidden";
+    }
+}
 let rettSvar = 0;
 let score = 0;
 let tid = 0;

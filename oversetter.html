@@ -13,11 +13,18 @@
 </head>
 
 <body class="oversetter">
+    <div id="litennav">
+        <a href="index.html">Hjem</a>
+        <a href="oversetter.html">Binære</a>
+        <a href="tegnsett.html">Tegnsett</a>
+        <a href="spill.html">Spill</a>
+    </div>
     <div class="navbar">
         <a href="index.html">Hjem</a>
         <a href="oversetter.html">Binære</a>
         <a href="tegnsett.html">Tegnsett</a>
         <a href="spill.html">Spill</a>
+        <i class="fa-solid fa-bars" onclick="litennav()"></i>
     </div>
     <div id="hovedoversetter">
         <div id="tekst">
@@ -164,6 +171,17 @@
     </footer>
 
     <script>
+        function litennav() {
+            const nav = document.getElementById("litennav");
+            const body = document.body;
+            if (nav.classList.contains("vis")) {
+                nav.classList.remove("vis");
+                body.style.overflow = "auto"; 
+            } else {
+                nav.classList.add("vis");
+                body.style.overflow = "hidden";
+            }
+        }
 
         function konvertervanlig() {
             event.preventDefault();
