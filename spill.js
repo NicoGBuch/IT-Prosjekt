@@ -134,7 +134,7 @@ function finnPosisjon() {
     const sky = document.getElementById("sky");
     const posisjon = sky.getBoundingClientRect();
     let hoydeForhold = Math.round(posisjon.top / window.innerHeight * 1000);
-    if (hoydeForhold >= 720) {
+    if (hoydeForhold >= 750) {
         score -= 5;
         document.getElementById("score").innerHTML = score;
         console.log("Score decreased to:", score);

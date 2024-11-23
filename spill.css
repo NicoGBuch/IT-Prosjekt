@@ -30,7 +30,7 @@
     background-color: var(--background-color);
     display: grid;
     grid-template-columns: 20% auto 20%;
-    grid-template-rows: 10vh 70vh 7vh 13vh;
+    grid-template-rows: 76px 70vh 7vh 13vh;
 
 }
 
@@ -63,13 +63,13 @@
     height: 100px;
     top: -110px;
     position: relative;
-    z-index: 0;
+    z-index: auto;
     animation-timing-function: linear;
     font-family: DynaPuff;
 }
 
 .tallFall {
-    animation: box 20s forwards;
+    animation: box 10s forwards;
 }
 
 
@@ -91,7 +91,7 @@
     position: relative;
     font-family: 'Black Ops One';
     background-color: var(--background-color);
-    z-index: 100;
+    z-index: auto;
     font-size: 100px;
 }
 
@@ -126,6 +126,12 @@ button {
     font-size: 20px;
 }
 
+#midten{
+    position: relative;
+    z-index: 0;
+}
+
+
 #høyre {
     grid-row: 2/4;
     grid-column: 3/4;
@@ -141,7 +147,6 @@ button {
     grid-column: 2/3;
     background-color: var(--background-color);
     position: relative;
-    z-index: 100;
     display: flex;
     justify-content: space-between;
 }
@@ -153,7 +158,7 @@ button {
     height: 7vh;
     width: 100px;
     position: relative;
-    z-index: 100;
+    z-index: auto;
     text-align: center;
     font-weight: 600;
 }
@@ -162,8 +167,11 @@ button {
     background-color: var(--background-color);
     grid-column: 1/4;
     position: relative;
-    z-index: 10;
+    z-index: auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #tidBox {
@@ -174,6 +182,7 @@ button {
 #tidBox p{
     color: var(--font-color);
 }
+
 
 
 @media(width < 1000px) {
@@ -187,7 +196,6 @@ button {
 
     .main {
         grid-template-columns: 15% auto 15%;
-        grid-template-rows: 10vh 70vh 5vh 15vh;
 
     }
 
@@ -216,8 +224,7 @@ button {
 
     .main {
         grid-template-columns: auto;
-        grid-template-rows: 7vh 8vh 68vh 5vh 7vh 8vh;
-
+        grid-template-rows: 76px 8vh 61vh 5vh 7vh 8vh;
     }
 
     #midten>h1 {
@@ -228,7 +235,7 @@ button {
         grid-row: 2/3;
         grid-column: 1/4;
         position: relative;
-        z-index: 100;
+        z-index: auto;
         background-color: var(--background-color);
     }
 
@@ -242,10 +249,9 @@ button {
     }
 
     .rør>div {
-        background-image: url(bilder/rør.png);
-        height: 5vh;
         width: 15%;
         padding-top: 3px;
+        height: 4vh;
     }
 
     #sky {
